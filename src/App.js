@@ -21,11 +21,11 @@ class App extends React.Component {
 		fetch('https://api.github.com/users/richardesquivel/followers')
 			.then(response => response.json())
 			.then(data => this.setState({ followers: data }));
-
+		console.log("Did Mount?", this.state);
 	}
 	//because the fetch is asynchronous we utilized component did update to display the console log of this.setState which is the object received of user:data componentDidUpdate occurs during rerenders so will display followers as well upon update
 	componentDidUpdate() {
-		console.log(this.state)
+		console.log("Did Update?", this.state)
 	}
 
 
