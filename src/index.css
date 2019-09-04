@@ -59,7 +59,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: linear-gradient(141deg, #9fb8ad 0%,purple 40%, darkGrey 85%);
 }
 .container {
   max-width: 800px;
@@ -70,13 +70,6 @@ body {
   align-items: center;
 }
 
-.header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
-}
 
 .header img {
   width: 150px;
@@ -95,37 +88,41 @@ body {
   width: 100%;
   padding: 20px;
   display: flex;
+  flex-direction:column;
   border-radius: 5px;
   box-shadow: 0 1px 6px -2px #000;
-  background-color: #FFF;
-  margin-bottom: 30px;
+  background: linear-gradient(141deg, #9fb8ad 0%,purple 51%, black 75%);  margin-bottom: 30px;
+  color: rgb(6, 240, 162);
+  text-shadow: rgb(6, 230, 162) 2px 0 30px;
+
 }
 
 .card img {
   width: 150px;
   height: 150px;
   border-radius: 3px;
-  margin-right: 20px;
+  margin:0 auto;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: 10px 10px 5px grey;
+  margin-bottom: 10px;
+
 }
 
-.card .name {
-  font-size: 3.4rem;
-}
 
 .card p {
-  font-size: 1.4rem;
+  font-size: 1.9rem;
   margin-bottom: 3px;
 }
 
 .card .username {
-  font-size: 1.8rem;
+  font-size: 3.0rem;
   font-style: italic;
-  margin: 3px 0 10px;
+  margin: 10px 0 10px;
 }
 
-h1 {
-	font-size: 3rem;
+.followers {
+	font-size: 1.8rem;
 }
-p {
-	font-size: 2rem;
-}
+
+

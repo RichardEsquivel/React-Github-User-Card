@@ -34,7 +34,7 @@ class App extends React.Component {
 	//will pass followers as a prop to UserCard
 	render() {
 		return (
-			<div className="App card" >
+			<div className="App" >
 				<UserCard className="username" user={this.state.user} followers={this.state.followers} />
 
 
@@ -46,11 +46,12 @@ class App extends React.Component {
 //Going to map over props.followers and get follower objects and get unique ID from followers.id
 function UserCard(props) {
 	return (
-		<div>
-			<h1>Username: {props.user.login}</h1>
+		<div className="card">
+			<img src={props.user.avatar_url}></img>
+			<h1 className="username">Username: {props.user.login}</h1>
 			<p>Followers: {props.user.followers}</p>
 			<p>Repo URL: {props.user.repos_url}</p>
-			<div>{props.followers.map(follower => <div key={follower.id}>{follower.login}</div>)}
+			<div className="followers">{props.followers.map(follower => <div key={follower.id}>{follower.login}</div>)}
 			</div>
 		</div>
 	)
